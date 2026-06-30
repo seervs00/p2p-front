@@ -180,7 +180,7 @@ export default function ChatBox({ onBack, username, fullName, avatar_url }) {
       ?.split("=")[1];
     if (!token) return;
 
-    const wsUrl = `wss://p2p-backend1.dedyn.io/ws/chat/${username}/?token=${token}`;
+    const wsUrl = `wss://p2p-backend-cek9.onrender.com/ws/chat/${username}/?token=${token}`;
     socketRef.current = new WebSocket(wsUrl);
 
     socketRef.current.onmessage = async (event) => {
